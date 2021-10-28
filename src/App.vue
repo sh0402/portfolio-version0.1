@@ -16,10 +16,10 @@
             transition="scale-transition"
             width="32"
           />
-          <v-btn text class="text-none" brandColor>Home</v-btn>
-          <v-btn text class="text-none" brandColor>About</v-btn>
-          <v-btn text class="text-none" brandColor>Projects</v-btn>
-          <v-btn text class="text-none" brandColor>Contact</v-btn>
+          <v-btn text class="text-none">Home</v-btn>
+          <v-btn text class="text-none">About</v-btn>
+          <v-btn text class="text-none">Projects</v-btn>
+          <v-btn text class="text-none">Contact</v-btn>
           <v-spacer/>
           <v-btn icon>
             <v-icon v-icon>mdi-account</v-icon>
