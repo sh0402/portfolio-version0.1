@@ -1,32 +1,51 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+
+    <v-app-bar
+      app
+      color=""
+      light
+    >
+      <v-container>
+        <div class="d-flex  align-center">
+          <v-img
+            alt="Vuetify Logo"
+            class="shrink mr-2"
+            contain
+            src="./assets/logo.png"
+            transition="scale-transition"
+            width="32"
+          />
+          <v-btn text class="text-none" brandColor>Home</v-btn>
+          <v-btn text class="text-none" brandColor>About</v-btn>
+          <v-btn text class="text-none" brandColor>Projects</v-btn>
+          <v-btn text class="text-none" brandColor>Contact</v-btn>
+          <v-spacer/>
+          <v-btn icon>
+            <v-icon v-icon>mdi-account</v-icon>
+          </v-btn>
+        </div>
+      </v-container>
+    </v-app-bar>
+
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+export default {
+  name: 'App',
+
+  data: () => ({
+    //
+  })
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+@import '@/assets/variables';
 
-#nav {
-  padding: 30px;
+$brandColor: #0273d7;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
